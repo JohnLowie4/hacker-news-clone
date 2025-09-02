@@ -19,5 +19,13 @@ export default tseslint.config([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    overrides: [
+      {
+        files: ["src/services/*ts"],
+        rules: {
+          "react-hooks/rules-of-hooks": "off"
+        }
+      }
+    ]
   },
 ])

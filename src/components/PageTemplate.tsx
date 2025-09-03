@@ -9,12 +9,14 @@ type PageTemplateProps = {
 function PageTemplate({ children }: PageTemplateProps) {
 
   return (
-    <div>
-      <UniversalHeader />
-      <h1>Page Template</h1>
-      {children}
-      <UniversalFooter />
-    </div>
+    <center>
+      <div className="block w-[85%] bg-ivory">
+        <UniversalHeader />
+        <h1>Page Template</h1>
+        {children}
+        <UniversalFooter />
+      </div>
+    </center>
   );
 }
 

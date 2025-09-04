@@ -7,3 +7,7 @@ body {
   display: block;
   margin: 8px;
 }
+
+#page {
+  background-color: #f6f6ef;
+}

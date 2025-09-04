@@ -10,7 +10,7 @@ function PageTemplate({ children }: PageTemplateProps) {
 
   return (
     <center>
-      <div className="block w-[85%] bg-ivory">
+      <div id="page" className="block w-[85%]">
         <UniversalHeader />
         <h1>Page Template</h1>
         {children}

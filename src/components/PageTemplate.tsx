@@ -12,7 +12,6 @@ function PageTemplate({ children }: PageTemplateProps) {
     <center>
       <div id="page" className="block w-[85%]">
         <UniversalHeader />
-        <h1>Page Template</h1>
         {children}
         <UniversalFooter />
       </div>

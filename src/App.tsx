@@ -1,9 +1,10 @@
 import PageTemplate from './components/PageTemplate'
+import ArticleItemList from './components/ArticleItemList'
 
 function App() {
   return (
     <PageTemplate>
-      <h1>Hello World</h1>
+      <ArticleItemList />
     </PageTemplate>
   )
 }

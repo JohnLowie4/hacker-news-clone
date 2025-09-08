@@ -3,7 +3,7 @@ function UniversalHeader() {
     <div className="flex items-center bg-orange-500 p-[2px] text-black">
       <div className="mr-[5px]">
         <a href="https://news.ycombinator.com">
-          <img className="block border border-solid border-white h-[20px] w-[20px]" src="https://news.ycombinator.com/y18.svg" alt="Hacker News Logo"/>
+          <img className="block border border-solid border-white h-[20px] w-[20px]" src="src/assets/y18.svg" alt="Hacker News Logo"/>
         </a>
       </div>
       <div className="flex items-center h-[10px] leading-[16px]">

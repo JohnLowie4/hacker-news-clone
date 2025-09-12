@@ -48,34 +48,33 @@ function ArticleItem(props: { itemId: number; index: number }): React.JSX.Elemen
   }
 
   return (
-    <div id={`article-item-${articleData?.id}`} className="h-4.5 mb-[5px]">
-      <div id="article-item-header">
-        <span id={`article-item-ordered-${props.index}`}>{props.index}.</span>
+    <div id={`article-item-${articleData?.id}`} className="px-[5px]">
+      <div id="article-item-header" className="flex">
+        <span id={`article-item-ordered-${props.index}`} className="ml-2">{props.index}.</span>
         <a href={`https://news.ycombinator.com/vote?id=${articleData?.id}&how=up&goto=news`}>
           <img src="src/assets/triangle.svg" width="10" height="10" alt="upvote" className="mx-0.5 mt-[3px] mb-1.5"/>
         </a>
 
-        {articleData?.url && (<><a id="article-item-title" href={articleData?.url}>
-          <span>{articleData?.title}</span>
-        </a>
-        <a id="article-item-source" href={articleData?.url}>
-          <span>({formatUrl(articleData?.url)})</span>
-        </a></>)}
-
+        {articleData?.url && (<>
+          <a id="article-item-title" href={articleData?.url}>
+            <span className="text-black">{articleData?.title}</span>
+          </a>
+          {" "}
+          <a id="article-item-source" href={articleData?.url}>
+            <span className="text-[10.67px]">({formatUrl(articleData?.url)})</span>
+          </a>
+        </>)}
         
       </div>
-      <div id="article-item-subInfo">
-        <span>{articleData?.score}</span>
-        {" by "}
-        <a href={`https://news.ycombinator.com/user?id=${articleData?.by}`}>{articleData?.by}</a>
-        {" "}
+      <div id="article-item-sub-info" className="flex ml-9 text-[9.33px]">
+        <span>{articleData?.score} points by </span>
+        <a href={`https://news.ycombinator.com/user?id=${articleData?.by}`}>&nbsp;{articleData?.by}</a>
         {/* Perhaps I can come back and set this up so that it does redirect to a different page */}
-        {articleData?.time && (<span>{getHoursAgo(articleData?.time)} hours ago</span>)}
-        
-        {' | '}
+        {articleData?.time && (<span>&nbsp;{getHoursAgo(articleData?.time)} hours ago</span>)}
+        <>&nbsp;|&nbsp;</>
         {/* Perhaps I can come back and set this up so that it does redirect to a different page */}
         <a>hide</a>
-        {' | '}
+        <>&nbsp;|&nbsp;</>
         <a href={`https://news.ycombinator.com/item?id=${articleData?.id}`}>
           <span>{articleData?.descendants} comments</span>
         </a>

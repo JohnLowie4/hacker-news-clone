@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import ArticleItem from "./ArticleItem";
 
 function ArticleItemList() {
   const [topStories, setTopStories] = useState<number[]>([]);
@@ -17,12 +18,20 @@ function ArticleItemList() {
     fetchData();
   }, []);
 
-  
+  function itemList () {
+    const itemListArray: React.ReactNode[] = [];
+    
+    for (let i = 0; i < 30; i++) {
+      itemListArray.push(<ArticleItem itemId={topStories[i]} index={i + 1} />);
+    }
+
+    return itemListArray;
+  }
 
   return (
     <div>
       <h1>Article Item List</h1>
-      {topStories.length > 0 ? "Top stories fetched successfully!" : "Loading top stories..."}
+      {topStories.length > 0 ? itemList() : "Loading top stories..."}
     </div>
   );
 }

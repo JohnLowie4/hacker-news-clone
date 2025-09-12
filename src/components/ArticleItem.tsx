@@ -12,7 +12,7 @@ type ArticleItemProps = {
   url: string;
 };
 
-function ArticleItem(props: ArticleItemProps) {
+function ArticleItem(props: ArticleItemProps): React.JSX.Element {
 
   // Function to format URL to display only the hostname without "www."
   function formatUrl(url: string): string {
@@ -32,11 +32,11 @@ function ArticleItem(props: ArticleItemProps) {
   }
 
   return (
-    <div id={`article-item-${props.id}`}>
+    <div id={`article-item-${props.id}`} className="h-4.5 mb-[5px]">
       <div id="article-item-header">
-        <span id={`article-item-ordered-${props.index}`}>{props.index}</span>
+        <span id={`article-item-ordered-${props.index}`}>{props.index}.</span>
         <a href={`https://news.ycombinator.com/vote?id=${props.id}&how=up&goto=news`}>
-          <img src="src/assets/triangle.svg" />
+          <img src="src/assets/triangle.svg" width="10" height="10" alt="upvote" className="mx-0.5 mt-[3px] mb-1.5"/>
         </a>
         <a id="article-item-title" href={props.url}>
           <span>{props.title}</span>
@@ -50,7 +50,7 @@ function ArticleItem(props: ArticleItemProps) {
         {" by "}
         <a href={`https://news.ycombinator.com/user?id=${props.by}`}>{props.by}</a>
         {" "}
-        {/* Perhaps I can go back and set this up so that it does redirect to a different page */}
+        {/* Perhaps I can come back and set this up so that it does redirect to a different page */}
         <span>{getHoursAgo(props.time)} hours ago</span>
         {' | '}
         {/* Perhaps I can come back and set this up so that it does redirect to a different page */}

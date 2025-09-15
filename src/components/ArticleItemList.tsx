@@ -22,7 +22,7 @@ function ArticleItemList() {
     const itemListArray: React.ReactNode[] = [];
     
     for (let i = 0; i < 30; i++) {
-      itemListArray.push(<ArticleItem itemId={topStories[i]} index={i + 1} />);
+      itemListArray.push(<ArticleItem key={topStories[i]} itemId={topStories[i]} index={i + 1} />);
     }
 
     return itemListArray;

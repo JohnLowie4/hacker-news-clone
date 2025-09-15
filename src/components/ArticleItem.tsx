@@ -55,15 +55,17 @@ function ArticleItem(props: { itemId: number; index: number }): React.JSX.Elemen
           <img src="src/assets/triangle.svg" width="10" height="10" alt="upvote" className="mx-0.5 mt-[3px] mb-1.5"/>
         </a>
 
-        {articleData?.url && (<>
-          <a id="article-item-title" href={articleData?.url}>
+        {articleData?.title && (<>
+          <a id="article-item-title" href={articleData?.url ? articleData?.url : `https://news.ycombinator.com/item?id=${articleData?.id}`}>
             <span className="text-black">{articleData?.title}</span>
           </a>
           {" "}
+        </>)}
+        {articleData?.url && (
           <a id="article-item-source" href={articleData?.url}>
             <span className="text-[10.67px]">({formatUrl(articleData?.url)})</span>
           </a>
-        </>)}
+        )}
         
       </div>
       <div id="article-item-sub-info" className="flex ml-9 text-[9.33px]">

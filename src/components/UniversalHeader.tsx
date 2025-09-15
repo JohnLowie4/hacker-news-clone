@@ -7,7 +7,7 @@ function UniversalHeader() {
         </a>
       </div>
       <div className="flex items-center h-[10px] leading-[16px]">
-        <b className="mr-[5px]">Hacker News</b>
+        <b className="mr-[5px]">Hacker News Clone</b>
         <span>
           <a>new</a>
           {' | '}

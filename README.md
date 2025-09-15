@@ -1,69 +1,22 @@
-# React + TypeScript + Vite
+# Hacker News Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a clone of [Hacker News](https://news.ycombinator.com/), built with TypeScript and React.
 
-Currently, two official plugins are available:
+### Purpose of this project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Continuous development, training, and review of the following skills:
 
-## Expanding the ESLint configuration
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://react.dev/)
+  - Hooks
+  - RESTful API
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Storybook](https://storybook.js.org/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Some Caveat
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- This app is not a 100% clone of Hacker News
+- The app's homepage is the only page that is functional
+- This project is simply to see how fast I can build a page with little to no testing, and to review the tech stacks that I've worked on in the past
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+<img src='./src/assets/hacker-news-clone-screenshot.png' width=700/>
